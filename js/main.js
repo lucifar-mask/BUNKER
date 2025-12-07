@@ -1,5 +1,5 @@
 // =============================
-// BUNKER TERMINAL — main.js
+// BUNKER TERMINAL — main.js (FINAL CLEAN VERSION)
 // Input engine, boot sequence, routing
 // =============================
 
@@ -9,18 +9,17 @@ window.onload = () => {
   inputField = document.getElementById("terminal-input");
   output = document.getElementById("terminal-output");
 
-  initAudio(); // prepare audio system
+  // Initialize audio system
+  initAudio();
 
   // Auto-focus for desktop + mobile
   inputField.focus();
   document.body.addEventListener("touchstart", () => inputField.focus());
 
-  // If first boot complete → skip intro
-  if (bootCompleted()) {
+  // Always run boot sequence on load for now
+  bootSequence().then(() => {
     print("BUNKER:~$");
-  } else {
-    bootSequence();
-  }
+  });
 
   // Listen for input
   inputField.addEventListener("keydown", handleInput);
@@ -35,20 +34,22 @@ function handleInput(e) {
   const raw = inputField.value.trim();
   inputField.value = "";
 
+  // Echo command line
+  print(`BUNKER:~$ ${raw}`);
+
   if (raw === "") {
     print("BUNKER:~$");
     return;
   }
 
-  print(`BUNKER:~$ ${raw}`);
-
   // If quest data capture is active
-  if (currentQuestCapture) {
+  if (typeof currentQuestCapture !== "undefined" && currentQuestCapture) {
     handleQuestCapture(raw);
     print("BUNKER:~$");
     return;
   }
 
+  // Route normal command
   routeCommand(raw);
   print("BUNKER:~$");
 }
@@ -102,37 +103,4 @@ async function bootSequence() {
   print("Welcome to BUNKER Terminal.");
   print("Type HELP to begin.");
   print("");
-
-  setBootComplete();
-}
-
-// =============================
-// PASSWORD GATE (optional to activate)
-// =============================
-// If you want to enable password gate, call passwordGate()
-// at the top of window.onload().
-
-async function passwordGate() {
-  clearOutput();
-  print("ACCESS RESTRICTED");
-  print("ENTER PASSWORD:");
-
-  return new Promise(resolve => {
-    const listener = e => {
-      if (e.key === "Enter") {
-        const pwd = inputField.value.trim();
-        inputField.value = "";
-        if (pwd === "xxxxbunker091025xxxx") {
-          print("ACCESS GRANTED");
-          playSound("grant");
-          document.removeEventListener("keydown", listener);
-          resolve(true);
-        } else {
-          print("ACCESS DENIED");
-          glitchBurst();
-        }
-      }
-    };
-    document.addEventListener("keydown", listener);
-  });
 }
