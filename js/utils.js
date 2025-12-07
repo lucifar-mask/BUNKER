@@ -12,7 +12,12 @@ function print(text = "") {
   
   function printGreen(text = "") {
     const out = document.getElementById("terminal-output");
-    out.innerHTML += `<span style="color:#00ff7f">${text}</span>\n`;
+    out.innerHTML += `<span style="color: #7af77a;">${text}</span>\n`;
+    out.scrollTop = out.scrollHeight;
+  }
+  function printRed(text = "") {
+    const out = document.getElementById("terminal-output");
+    out.innerHTML += `<span style="color:#ff0000">${text}</span>\n`;
     out.scrollTop = out.scrollHeight;
   }
   // Print without newline

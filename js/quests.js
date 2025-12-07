@@ -333,10 +333,10 @@ const QUESTS = {
   
   function finishQuest(id) {
     print("");
-    print("QUEST COMPLETE ✔");
+    printGreen("QUEST COMPLETE ✔");
     completeQuest(id);
     print(separator());
-    print("WARNING: CONTACT INFORMATION REQUESTED.");
+    printGreen("WARNING: CONTACT INFORMATION REQUESTED.");
     print("Enter email address:");
     currentQuestCapture = { quest: id, step: "email" };
   }

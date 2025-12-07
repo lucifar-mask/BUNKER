@@ -40,9 +40,9 @@ function runCommand(cmd, args) {
 // HELP
 // =============================
 function helpCommand() {
-  print("=====================================================");
-  print(" BUNKER TERMINAL – PUBLIC OPERATIONS MANUAL v1.0");
-  print("=====================================================");
+  printGreen("=====================================================");
+  printGreen(" BUNKER TERMINAL – PUBLIC OPERATIONS MANUAL v1.0");
+  printGreen("=====================================================");
   print("");
   print("PUBLIC COMMANDS:");
   print("-----------------------------------------------------");
