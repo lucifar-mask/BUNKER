@@ -49,9 +49,6 @@ function handleInput(e) {
     return;
   }
 
-  //Clear Screen
-  clearOutput();
-
   // Route normal command
   routeCommand(raw);
   print("BUNKER:~$");

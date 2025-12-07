@@ -13,6 +13,12 @@ function runCommand(cmd, args) {
     // CORE
     case "help": return helpCommand();
     case "clear": return clearOutput();
+    case "clear": return print("██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗███████╗██████╗ ");
+    case "clear": return print("B U N K E R   T E R M I N A L   v1.0");
+    case "clear": return print("---------------------------------------------------");
+    case "clear": return print("Welcome to BUNKER Terminal.");
+    case "clear": return print("Type HELP to begin.");
+    case "clear": return print("");
     case "version": return versionCommand();
 
     // AUDIO
@@ -123,7 +129,7 @@ function ticketsCommand() {
 // =============================
 function contactCommand() {
   print("CONTACT CHANNELS:");
-  print("Email: bunker-ops@yourdomain.com");
+  print("Email: teddy404.dj@gmail.com");
   print("Instagram: @teddy404.dj");
 }
 
