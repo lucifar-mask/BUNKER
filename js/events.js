@@ -7,8 +7,8 @@
 // Add future events using the template at the bottom.
 
 const EVENTS = {
-    "001": {
-      name: "EUPHORIA RAVE",
+    "ver0.1": {
+      name: "TEDDY404 DEBUT",
       date: "09.10.2025",
       location: "Tel Aviv",
       status: "completed",
@@ -16,20 +16,13 @@ const EVENTS = {
     },
   
     "002": {
-      name: "UNDERCORE TRANSMISSION",
+      name: "EUPHORIC MADNESS",
       date: "TBD",
       location: "TBD",
       status: "upcoming",
       notes: "Operational frequency not yet stabilized. Awaiting authorization."
     },
-  
-    "003": {
-      name: "VOIDSTREAM ACCESS",
-      date: "TBD",
-      location: "TBD",
-      status: "upcoming",
-      notes: "Projected to open deeper network layers."
-    }
+    
   
     // ------------------------------------------------------
     // TO ADD A NEW EVENT:

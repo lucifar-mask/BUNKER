@@ -18,7 +18,7 @@ window.onload = () => {
 
   // Always run boot sequence on load for now
   bootSequence().then(() => {
-    print("BUNKER:~$");
+    print("(Type HELP to begin.) BUNKER:~$");
   });
 
   // Listen for input
@@ -35,23 +35,23 @@ function handleInput(e) {
   inputField.value = "";
 
   // Echo command line
-  print(`BUNKER:~$ ${raw}`);
+  print(`"(Type HELP to begin.) BUNKER:~$" ${raw}`);
 
   if (raw === "") {
-    print("BUNKER:~$");
+    print("(Type HELP to begin.) BUNKER:~$");
     return;
   }
 
   // If quest data capture is active
   if (typeof currentQuestCapture !== "undefined" && currentQuestCapture) {
     handleQuestCapture(raw);
-    print("BUNKER:~$");
+    print("(Type HELP to begin.) BUNKER:~$");
     return;
   }
 
   // Route normal command
   routeCommand(raw);
-  print("BUNKER:~$");
+  print("(Type HELP to begin.) BUNKER:~$");
 }
 
 // =============================
@@ -73,14 +73,14 @@ async function bootSequence() {
   clearOutput();
 
   print("INITIALIZING CORE SYSTEMS…");
-  await wait(500);
-  print("LOADING MODULES………… DONE");
+  await wait(1000);
+  print("LOADING MODULES………… DONE ✔");
   await wait(500);
   print("VERIFYING AUTHORIZATION………");
   await wait(600);
   print("AUTH LEVEL: LIMITED OPERATOR");
   await wait(400);
-  print("STABILIZING ENVIRONMENT…… OK");
+  print("STABILIZING ENVIRONMENT…… OK ✔");
   await wait(600);
   print("");
 
@@ -102,6 +102,5 @@ async function bootSequence() {
   print("B U N K E R   T E R M I N A L   v1.0");
   print("---------------------------------------------------");
   print("Welcome to BUNKER Terminal.");
-  print("Type HELP to begin.");
   print("");
 }
