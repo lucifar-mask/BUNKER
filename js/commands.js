@@ -106,7 +106,7 @@ function eventsCommand(args) {
 // GALLERY
 // =============================
 function galleryCommand() {
-  print("ARCHIVE: Visual records not available in terminal mode.");
+  printGreen("ARCHIVE: Visual records not available in terminal mode.");
   print("Use external interface when deployed.");
 }
 
@@ -114,7 +114,7 @@ function galleryCommand() {
 // TICKETS
 // =============================
 function ticketsCommand() {
-  print("TICKET PORTAL:");
+  printGreen("TICKET PORTAL:");
   print("https://yourdomain.com/tickets");
 }
 
@@ -122,7 +122,7 @@ function ticketsCommand() {
 // CONTACT
 // =============================
 function contactCommand() {
-  print("CONTACT CHANNELS:");
+  printGreen("CONTACT CHANNELS:");
   print("Email: teddy404.dj@gmail.com");
   print("Instagram: @teddy404.dj");
 }
@@ -131,7 +131,7 @@ function contactCommand() {
 // SETS
 // =============================
 function setsCommand() {
-  print("AUDIO ARCHIVE:");
+  printGreen("AUDIO ARCHIVE:");
   print("External audio links will be displayed here later.");
 }
 

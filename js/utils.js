@@ -10,6 +10,11 @@ function print(text = "") {
     out.scrollTop = out.scrollHeight;
   }
   
+  function printGreen(text = "") {
+    const out = document.getElementById("terminal-output");
+    out.innerHTML += `<span style="color:#00ff7f">${text}</span>\n`;
+    out.scrollTop = out.scrollHeight;
+  }
   // Print without newline
   function printRaw(text = "") {
     const out = document.getElementById("terminal-output");

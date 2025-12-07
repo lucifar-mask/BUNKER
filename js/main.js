@@ -98,9 +98,11 @@ async function bootSequence() {
   await wait(400);
 
   // ASCII BANNER
-  print("██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗███████╗██████╗ ");
-  print("B U N K E R   T E R M I N A L   v1.0");
-  print("---------------------------------------------------");
+  printGreen("██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗███████╗██████╗ ");
+  printGreen("B U N K E R   T E R M I N A L   v1.0");
+  printGreen("---------------------------------------------------");
+  print("");
+  print("");
   print("Welcome to BUNKER Terminal.");
   print("");
 }
