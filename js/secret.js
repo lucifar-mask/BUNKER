@@ -126,7 +126,7 @@ function teddyAscii() {
   print("--------------------------------");
   print("  (\\_/)");
   print("  ( •_•)   <\\ glitch bear online");
-  print(" / >❤️   ");
+  print("     / >❤️   ");
   print("--------------------------------");
 }
 
