@@ -373,7 +373,7 @@ const QUESTS = {
   
   // Send data to Google Sheet API
   function submitToSheet(payload) {
-    fetch("https://script.google.com/macros/s/YOUR_API_KEY/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbysvDGssHJDEpl-9b0shrjJLqQ6t5uYgfExMjIdcSMJy4h-Hx9yw0XghmGg_h1i2B_Q/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
