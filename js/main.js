@@ -62,8 +62,9 @@ function routeCommand(raw) {
   const cmd = parts[0].toLowerCase();
   const args = parts.slice(1);
 
-  clearOutput();
+  
   runCommand(cmd, args);
+  clearOutput();
 }
 
 // =============================
