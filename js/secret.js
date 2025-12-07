@@ -6,8 +6,8 @@
 // All secret/immersive commands live here.
 // They only run when audioEnabled() === true.
 
-/*function runSecretCommand(cmd, args) {
-    if (!audioEnabled()) {
+function runSecretCommand(cmd, args) {
+    if (audioEnabled()) {
       print("IMMERSIVE MODULE DISABLED.");
       print("Audio subsystem is offline.");
       print("Use SOUND ON to unlock advanced interactions.");
@@ -26,7 +26,7 @@
       default: return false; // not found here
     }
  }
-   */
+
   function runSecretCommand(cmd, args) {
   console.log("SECRET CHECK:", cmd);
   } 
