@@ -19,7 +19,7 @@ window.onload = () => {
   if (bootCompleted()) {
     print("BUNKER:~$");
   } else {
-    passwordGate().then(() => bootSequence());
+    bootSequence();
   }
 
   // Listen for input

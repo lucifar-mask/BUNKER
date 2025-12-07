@@ -7,7 +7,7 @@
 // They only run when audioEnabled() === true.
 
 function runSecretCommand(cmd, args) {
-    if (audioEnabled()) {
+    if (!audioEnabled()) {
       print("IMMERSIVE MODULE DISABLED.");
       print("Audio subsystem is offline.");
       print("Use SOUND ON to unlock advanced interactions.");
