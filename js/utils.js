@@ -20,6 +20,12 @@ function print(text = "") {
   // Clear terminal
   function clearOutput() {
     document.getElementById("terminal-output").innerHTML = "";
+    print("██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗███████╗██████╗ ");
+    print("B U N K E R   T E R M I N A L   v1.0");
+    print("---------------------------------------------------");
+    print("Welcome to BUNKER Terminal.");
+    print("Type HELP to begin.");
+    print("");
   }
   
   // ASCII separator
